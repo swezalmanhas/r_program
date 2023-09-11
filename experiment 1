@@ -1,0 +1,57 @@
+1.
+x<-c(5,10,15,20,25,30)
+max(x)
+min(x)
+
+2.
+fac<-as.integer(readline("enter the number"))
+ans=1
+for (i in 1:fac)
+{
+  ans=ans*i
+}
+print(ans)
+
+
+3.
+fac<-as.integer(readline("emter the number"))
+n1<-0
+n2<-1
+for(i in 1:fac)
+{
+  ans=n1+n2
+  n1=n2
+ n2=ans
+}
+print(ans)
+
+
+4.
+n1<-as.integer(readline("enter the number 1 "))
+n2<-as.integer(readline("enter the number 2"))
+sign<-as.integer(readline("enter the number"))
+if(sign==1)
+{
+  result<-n1+n2
+  cat("result",result)
+}else if(sign==2)
+{
+  result<-n1-n2
+  cat("rseult",result)
+}else if (sign==3)
+{
+  result<-n1*n2
+  cat("result",result)
+}else if (sign==4)
+{
+  result<-n1/n2
+  cat("result",result)
+  
+}
+
+
+
+5.
+x<-seq(2,10,1)
+plot(x)
+pie(x)
