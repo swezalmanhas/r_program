@@ -1,0 +1,48 @@
+1.
+chest<-c(rep("gold",20),rep("silver",30),rep("broze",50))
+sample(chest,10)
+
+C<-c("success","failure")
+sample(C,10,replace=TRUE,prob=c(0.9,0.1))
+
+2.
+n=5
+prod=1
+for(i in 1:(n-1))
+{
+  prod=prod*(1-(i/365))
+  
+}
+p=1-prod
+print(p)
+
+3.
+cp<-function(pr,pc,prc)
+{
+  pcr=(pr*prc)/pc
+  print(pcr)
+}
+cp(0.2,0.4,0.85)
+
+4.
+D<-iris
+head(D)
+str(D)
+range(D$Sepal.Length)
+mean(D$Sepal.Length)
+median(D$Sepal.Length)
+quantile(D$Sepal.Length,0.25)
+quantile(D$Sepal.Length,0.75)
+sd(D$Sepal.Length)
+var(D$Sepal.Length)
+summary(D)
+
+5.
+v<-c(1,1,1,2,3,3,2,2,2,2,2,3,3)
+y<-table(v)
+u<-max(y)
+print(as.integer(names(y[y==max(y)])))
+
+
+
+
