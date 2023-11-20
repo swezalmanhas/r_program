@@ -1,0 +1,24 @@
+data<-read.csv(file.choose())
+dim(data)
+head(data,10)
+mean(data$Wall.Thickness)
+
+hist(data$Wall.Thickness,col = "pink",main = "Histogram for Wall Thickness",xlab = "wall thickness")
+abline(v=12.8,col="red",lty=1)
+
+
+
+sample_10 <- replicate(1000, mean(sample(data$Wall.Thickness, 10, replace = TRUE)))
+hist(sample_10)
+
+# Do you get a normal distribution?
+
+# Now repeat the same with sample sizes 50, 500, and 9000.
+sample_50 <- replicate(1000, mean(sample(data$Wall.Thickness, 50, replace = TRUE)))
+hist(sample_50)
+
+sample_500 <- replicate(1000, mean(sample(data$Wall.Thickness, 500, replace = TRUE)))
+hist(sample_500)
+
+sample_9000 <- replicate(1000, mean(sample(data$Wall.Thickness, 9000, replace = TRUE)))
+hist(sample_9000)
